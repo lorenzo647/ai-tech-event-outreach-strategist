@@ -1,6 +1,6 @@
 # AI Tech-Event Outreach Strategist
 
-> **Non si ferma a "chi contattare" — quello e' ormai commodity. Per ogni figura tech senior genera il messaggio di outreach gia' scritto e ancorato a un segnale reale e recente della sua azienda. E non inventa mai.**
+> **Non si ferma a "chi contattare" - quello e' ormai commodity. Per ogni figura tech senior genera il messaggio di outreach gia' scritto e ancorato a un segnale reale e recente della sua azienda. E non inventa mai.**
 > Scoring ICP, segmentazione, track giusta e un **message engine** che apre ogni contatto con un complimento concreto sull'ultimo progetto della sua azienda. Pensato per popolare una **grande conferenza tech B2B** con i tech leader giusti — e, come extra mile, per acquisire gli sponsor giusti.
 
 ![Status](https://img.shields.io/badge/status-POC-yellow) ![Built with](https://img.shields.io/badge/built%20with-Claude-orange) ![Use case](https://img.shields.io/badge/use%20case-B2B%20Tech%20Events-blue) ![License](https://img.shields.io/badge/license-MIT-green)
@@ -21,7 +21,7 @@
 
 ---
 
-## 🎯 Profilo del cliente ideale (ICP) — il primo passo, esplicito
+## 🎯 Profilo del cliente ideale (ICP) - il primo passo, esplicito
 
 Prima di "chi contattare" viene "chi vogliamo in sala". Questo e' il profilo, e lo scoring del tool ne e' la traduzione in numeri:
 
@@ -36,7 +36,7 @@ L'ICP si applica **due volte**: come filtri di ricerca a monte (Sales Navigator)
 
 Il tool non sostituisce gli strumenti dell'evento: ci sta in mezzo, dove serve il giudizio. Il collante di automazione e' **n8n** (open source, self-hostabile); Zapier e Make sono alternative equivalenti.
 
-**Stage 0 — da dove arrivano i dati (la fonte).** Non si parte da una lista a caso. Si parte da una **ricerca su Sales Navigator** con i filtri che sono l'ICP tradotto in ricerca: seniority (CXO, VP, Director), funzione (Engineering, IT), area geografica, dimensione e settore dell'azienda. Quei risultati vengono **estratti in CSV** con Waalaxy o Phantombuster. Il CSV grezzo (titoli disomogenei compresi) entra nel tool, che **normalizza il titolo**, deduce seniority e dominio, e calcola lo scoring. Quindi la fonte e' la ricerca mirata su Sales Navigator; il tool lavora su quell'export.
+**Stage 0 - da dove arrivano i dati (la fonte).** Non si parte da una lista a caso. Si parte da una **ricerca su Sales Navigator** con i filtri che sono l'ICP tradotto in ricerca: seniority (CXO, VP, Director), funzione (Engineering, IT), area geografica, dimensione e settore dell'azienda. Quei risultati vengono **estratti in CSV** con Waalaxy o Phantombuster. Il CSV grezzo (titoli disomogenei compresi) entra nel tool, che **normalizza il titolo**, deduce seniority e dominio, e calcola lo scoring. Quindi la fonte e' la ricerca mirata su Sales Navigator; il tool lavora su quell'export.
 
 ```
 Sales Navigator (ricerca "CTO/VP Eng / aziende dev-first")
@@ -52,10 +52,10 @@ Sales Navigator (ricerca "CTO/VP Eng / aziende dev-first")
 ```
 
 **Gerarchia, in ordine di serieta':**
-- **CSV / Google Sheets** — il formato base. L'output e' gia' un foglio: si apre ovunque, zero attrito, funziona oggi.
-- **Waalaxy** — da dove escono i contatti (import da Sales Navigator) e dove rientrano le liste segmentate per l'outreach.
-- **HubSpot** — il CRM di destinazione, dove vivono tier, note e sequenze: l'integrazione naturale del prodotto verso un CRM B2B diffuso.
-- **n8n** — il collante che, in roadmap, automatizza i passaggi.
+- **CSV / Google Sheets** - il formato base. L'output e' gia' un foglio: si apre ovunque, zero attrito, funziona oggi.
+- **Waalaxy** - da dove escono i contatti (import da Sales Navigator) e dove rientrano le liste segmentate per l'outreach.
+- **HubSpot** - il CRM di destinazione, dove vivono tier, note e sequenze: l'integrazione naturale del prodotto verso un CRM B2B diffuso.
+- **n8n** - il collante che, in roadmap, automatizza i passaggi.
 
 **Nota onesta di fattibilita'.** Sales Navigator non ha un'API aperta e Waalaxy non ha API in ingresso (i dati escono solo, via CSV o n8n/Zapier/Make). HubSpot invece ha un'API vera: il push dei tier come property e' fattibile, ma in questo POC non e' costruito, sta in roadmap. Niente scraping diretto, niente integrazione dichiarata e non fatta.
 
@@ -110,10 +110,10 @@ ai-tech-event-outreach-strategist/
 
 ## 🗺️ Roadmap
 
-- **v1.1 — Enrichment del segnale.** Uno step (n8n + ricerca web) che per ogni azienda trova l'ultimo progetto reale e riempie `company_recent_signal` con fonte e data, mantenendo il grounding.
-- **v1.2 — Push in HubSpot.** Scrivere tier e messaggio come property/nota sul contatto via API HubSpot, e far partire la sequenza.
-- **v1.3 — Sponsor scoring arricchito.** Integrare segnali di funding/hiring per qualificare meglio le aziende.
-- **v1.4 — No-show predittivo.** Da regole a soglia a modello sui dati storici dell'evento.
+- **v1.1 - Enrichment del segnale.** Uno step (n8n + ricerca web) che per ogni azienda trova l'ultimo progetto reale e riempie `company_recent_signal` con fonte e data, mantenendo il grounding.
+- **v1.2 - Push in HubSpot.** Scrivere tier e messaggio come property/nota sul contatto via API HubSpot, e far partire la sequenza.
+- **v1.3 - Sponsor scoring arricchito.** Integrare segnali di funding/hiring per qualificare meglio le aziende.
+- **v1.4 - No-show predittivo.** Da regole a soglia a modello sui dati storici dell'evento.
 
 ---
 
