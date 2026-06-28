@@ -22,12 +22,12 @@ L006 Luca Bertoni      36 C | Frontend                  | -     | MANCA
 LEADER TIER: A=7 | B=4 | C=1   Segnale mancante: L004, L006
 
 SPONSOR  score -> Tier | Decisore | Segnale
-S001 Vectorly    92 A | Head of Developer Relations | SI
+S001 Embedda    92 A | Head of Developer Relations | SI
 S002 Forgepipe   88 A | Co-founder & CEO            | SI
-S004 Cloudbridge 71 A | Solutions Architect         | SI
+S004 Nuvaria 71 A | Solutions Architect         | SI
 S003 Banca Aurea 65 B | Head of Tech Talent         | SI
-S005 Stamp       63 B | Marketing Lead              | SI
-S006 Reti Spa    20 Out| Brand Manager              | MANCA
+S005 Inkboard       63 B | Marketing Lead              | SI
+S006 Ferronet Spa    20 Out| Brand Manager              | MANCA
 SPONSOR TIER: A=3 | B=2 | Out=1
 </calcoli_interni>
 ```
@@ -54,7 +54,7 @@ Tier A 🟢 (7), Tier B 🟢 (4), Tier C 🟡 (1). Vedi tabella. Concentrazione 
 **[Tier A · RECUPERO drop-off ALTO · track Languages & Architectures] L010 Tomas Varga (Director of Engineering, Northpeak)**
 > Ciao Tomas, intanto complimenti per la riscrittura del core di pagamento con il -40% di latenza: numeri cosi' si vedono di rado. Ti scrivo perche' eri registrato a DevReach 2026 e non vorrei ti sfuggisse: track Languages & Architectures, c'e' un confronto serio su performance e architetture critiche. Ti confermo il posto?
 
-**[Tier B · sequenza Waalaxy · track Cloud & Architectures] L007 Anna Castelli (Solutions Architect, Cloudbridge)**
+**[Tier B · sequenza Waalaxy · track Cloud & Architectures] L007 Anna Castelli (Solutions Architect, Nuvaria)**
 > Ciao Anna, ho letto del vostro framework di FinOps per il controllo dei costi cloud: tema sempre piu' caldo. A DevReach 2026 (la conferenza, due giorni), track Cloud & Architectures, ci sono sessioni hands-on proprio su questo. Penso ti possa interessare: ti mando l'agenda?
 
 **[Tier B · RECUPERO drop-off ALTO · track Data Engineering] L003 Elena Fabbri (Engineering Manager, Banca Aurea)**
@@ -70,7 +70,7 @@ Tier A 🟢 (7), Tier B 🟢 (4), Tier C 🟡 (1). Vedi tabella. Concentrazione 
 
 **Tier A (priorita' commerciale):**
 
-**[S001 Vectorly · Head of Developer Relations · vende ai dev + assume]**
+**[S001 Embedda · Head of Developer Relations · vende ai dev + assume]**
 > Ciao Giorgia, complimenti per il lancio del vostro database vettoriale gestito per il RAG: e' esattamente cio' che cercano i team che stanno portando l'AI in produzione. A DevReach 2026 ci sono oltre 250k developer della community: per un prodotto cosi' dev-first e' il palco naturale per farvi provare e per assumere. Vi va un confronto sulle opzioni sponsor?
 
 **[S002 Forgepipe · Co-founder & CEO · seed fresco]**
@@ -79,7 +79,7 @@ Tier A 🟢 (7), Tier B 🟢 (4), Tier C 🟡 (1). Vedi tabella. Concentrazione 
 **[S003 Banca Aurea · Head of Tech Talent · Tier B, assume forte]**
 > Ciao Paola, ho visto che aprite un hub tech a Roma con 80 assunzioni: trovare quei profili e' la sfida vera. A DevReach 2026 incontrate dal vivo migliaia di developer, e c'e' uno spazio sponsor pensato per l'employer branding e il recruiting. Ti mando come funziona?
 
-⚠️ **S006 Reti Spa** scartato (Tier Out): non vende ai dev, non assume, nessun segnale recente. Non investire tempo 1:1.
+⚠️ **S006 Ferronet Spa** scartato (Tier Out): non vende ai dev, non assume, nessun segnale recente. Non investire tempo 1:1.
 
 ### 5. ALERT DROP-OFF
 - 🔴 **L010 Tomas Varga** (Tier A, Director): 22 giorni di silenzio, 0 aperture. Profilo piu' costoso da perdere. Azione: messaggio di recupero sopra, a mano, entro 24h.
