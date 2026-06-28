@@ -7,7 +7,7 @@
 
 ---
 
-## 🇮🇹 Executive Summary
+## Executive Summary
 
 **Cosa fa.** Prende un export di contatti (stile Waalaxy / Sales Navigator) e, per ogni figura senior, produce: lo **score ICP**, il **tier** di priorita', la **track** piu' adatta dell'evento, e soprattutto il **messaggio di outreach pronto da inviare**, che apre con un complimento specifico sull'ultimo progetto reale dell'azienda di quella persona.
 
@@ -128,9 +128,9 @@ ai-tech-event-outreach-strategist/
 
 ## 👤 Built by
 
-**Lorenzo Ricci** — Project Manager & Communications Specialist
+**Lorenzo Ricci** - Project Manager & Communications Specialist
 
-Nasce da un metodo che uso quando scrivo a qualcuno che conta: non un messaggio generico, ma qualcosa di vero e recente che la sua azienda ha fatto. L'ho messo dentro un sistema, con una regola ferma: mai inventare il complimento. Il resto — scoring, track, drop-off, fronte sponsor — serve a far arrivare quel messaggio alla persona giusta, prima che si perda per strada.
+Nasce da un metodo che uso quando scrivo a qualcuno che conta: non un messaggio generico, ma qualcosa di vero e recente che la sua azienda ha fatto. L'ho messo dentro un sistema, con una regola ferma: mai inventare il complimento. Il resto - scoring, track, drop-off, fronte sponsor — serve a far arrivare quel messaggio alla persona giusta, prima che si perda per strada.
 
 ## 📄 License
 
