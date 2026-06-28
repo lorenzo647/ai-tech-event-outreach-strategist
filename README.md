@@ -21,9 +21,22 @@
 
 ---
 
+## 🎯 Profilo del cliente ideale (ICP) — il primo passo, esplicito
+
+Prima di "chi contattare" viene "chi vogliamo in sala". Questo e' il profilo, e lo scoring del tool ne e' la traduzione in numeri:
+
+- **Audience ideale:** figura tech con potere o influenza decisionale (CTO, CIO, VP/Director of Engineering, Head of Platform/Data/AI, Staff/Principal, Solutions Architect), in scaleup, enterprise o startup tech, preferibilmente gia' attiva nella community (speaker, organizer, open source, past attendee).
+- **Sponsor ideale (extra mile):** azienda che vende ai developer e/o assume in ambito tech, con un segnale recente (lancio, round, hub), e il decisore giusto dentro (DevRel/Marketing o Head of Tech Talent).
+
+L'ICP si applica **due volte**: come filtri di ricerca a monte (Sales Navigator) e come scoring dentro il tool.
+
+---
+
 ## 🔌 La pipeline reale (collante: n8n)
 
 Il tool non sostituisce gli strumenti dell'evento: ci sta in mezzo, dove serve il giudizio. Il collante di automazione e' **n8n** (open source, self-hostabile); Zapier e Make sono alternative equivalenti.
+
+**Stage 0 — da dove arrivano i dati (la fonte).** Non si parte da una lista a caso. Si parte da una **ricerca su Sales Navigator** con i filtri che sono l'ICP tradotto in ricerca: seniority (CXO, VP, Director), funzione (Engineering, IT), area geografica, dimensione e settore dell'azienda. Quei risultati vengono **estratti in CSV** con Waalaxy o Phantombuster. Il CSV grezzo (titoli disomogenei compresi) entra nel tool, che **normalizza il titolo**, deduce seniority e dominio, e calcola lo scoring. Quindi la fonte e' la ricerca mirata su Sales Navigator; il tool lavora su quell'export.
 
 ```
 Sales Navigator (ricerca "CTO/VP Eng / aziende dev-first")
