@@ -1,7 +1,7 @@
 # AI Tech-Event Outreach Strategist
 
 > **Non si ferma a "chi contattare" - quello e' ormai commodity. Per ogni figura tech senior genera il messaggio di outreach gia' scritto e ancorato a un segnale reale e recente della sua azienda. E non inventa mai.**
-> Scoring ICP, segmentazione, track giusta e un **message engine** che apre ogni contatto con un complimento concreto sull'ultimo progetto della sua azienda. Pensato per popolare una **grande conferenza tech B2B** con i tech leader giusti — e, come extra mile, per acquisire gli sponsor giusti.
+> Scoring ICP, segmentazione, track giusta e un **message engine** che apre ogni contatto con un complimento concreto sull'ultimo progetto della sua azienda. Pensato per popolare una **grande conferenza tech B2B** con i tech leader giusti e, come extra mile, per acquisire gli sponsor giusti.
 
 ![Status](https://img.shields.io/badge/status-POC-yellow) ![Built with](https://img.shields.io/badge/built%20with-Claude-orange) ![Use case](https://img.shields.io/badge/use%20case-B2B%20Tech%20Events-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
