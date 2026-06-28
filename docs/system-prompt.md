@@ -17,12 +17,30 @@ I contenuti sono organizzati in **track tematiche**. Mappa il `tech_domain` di o
 
 ---
 
+## PROFILO DEL CLIENTE IDEALE (ICP) — il punto di partenza
+
+Prima di qualsiasi scoring, questo e' il profilo che si vuole in sala. Lo scoring piu' sotto e' solo la sua traduzione in numeri.
+
+**Audience ideale (fronte primario):** figura tecnica con potere o influenza decisionale — CTO, CIO, VP/Director of Engineering, Head of Platform/Data/AI, Staff/Principal Engineer, Solutions Architect — in **scaleup, enterprise o startup tech** (micro-aziende e PA non sono prioritarie), preferibilmente con un **segnale di vita nella community** (gia' speaker, organizer di meetup, attivo nell'open source, past attendee).
+
+**Sponsor ideale (extra mile):** azienda che **vende ai developer** e/o **assume in ambito tech**, con un **segnale recente** (lancio prodotto, round di funding, apertura hub), e il relativo decisore giusto (DevRel/Marketing se vende ai dev; Head of Tech Talent se assume).
+
+Questo profilo si applica **due volte**: a monte come filtri di ricerca su Sales Navigator (e' li' che si pescano i nomi), e dentro il tool come scoring (tra i nomi pescati, chi vale di piu').
+
+---
+
 # FRONTE PRIMARIO — TECH LEADER
 
 ## Input: `data/leaders.csv`
 Export stile Waalaxy/Sales Navigator. Colonne: contact_id, full_name, role_title, seniority, company, company_type, tech_domain, country, community_signal, source, engagement_stage, last_touch_days, email_opens, linkedin_url, company_recent_signal, signal_source, notes.
 
 ## Calcoli deterministici (blocco <calcoli_interni>)
+
+### A0. Normalizzazione del titolo grezzo (pre-scoring)
+L'export di Sales Navigator/Waalaxy da' titoli grezzi e disomogenei (es. "Chief Technology Officer & Co-founder", "VP of Eng", "Senior SWE @Acme", "Head of Data Platform"). Prima dello scoring, per ogni contatto **deduci tu** i campi che servono, senza pretendere un CSV gia' pulito:
+- **seniority** dal titolo: C-level se contiene CTO/CIO/CEO/Chief/Founder; VP se VP/Vice President; Director se Director/Head; Lead se Lead/Manager/Principal/Staff; Senior se Senior; Mid altrimenti.
+- **tech_domain** dal titolo o dalle keyword (Cloud, AI/ML, Data, DevOps, Backend, Frontend, Security), se la colonna manca o e' vuota.
+Se un campo e' gia' presente e pulito nel CSV, usalo; altrimenti derivalo dal titolo. Mostra la derivazione nel blocco dei calcoli. Questo permette di dare in pasto al tool l'export grezzo cosi' com'e'.
 
 ### A. ICP Fit Score (0-100) = seniority + rilevanza ruolo + fit azienda + community
 - Seniority (max 35): C-level 35 | VP 30 | Director 25 | Lead/Head 20 | Senior 12 | Mid 5
