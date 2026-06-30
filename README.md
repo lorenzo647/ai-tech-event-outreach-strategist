@@ -1,6 +1,6 @@
 # AI Tech-Event Outreach Strategist
 
-> **Non si ferma a "chi contattare" - quello e' ormai commodity. Per ogni figura tech senior genera il messaggio di outreach gia' scritto e ancorato a un segnale reale e recente della sua azienda. E non inventa mai.**
+> **Non si ferma a "chi contattare" - quello è ormai commodity. Per ogni figura tech senior genera il messaggio di outreach già scritto e ancorato a un segnale reale e recente della sua azienda. E non inventa mai.**
 > Scoring ICP, segmentazione, track giusta e un **message engine** che apre ogni contatto con un complimento concreto sull'ultimo progetto della sua azienda. Pensato per popolare una **grande conferenza tech B2B** con i tech leader giusti e, come extra mile, per acquisire gli sponsor giusti.
 
 ![Status](https://img.shields.io/badge/status-POC-yellow) ![Built with](https://img.shields.io/badge/built%20with-Claude-orange) ![Use case](https://img.shields.io/badge/use%20case-B2B%20Tech%20Events-blue) ![License](https://img.shields.io/badge/license-MIT-green)
@@ -9,11 +9,11 @@
 
 ## Executive Summary
 
-**Cosa fa.** Prende un export di contatti (stile Waalaxy / Sales Navigator) e, per ogni figura senior, produce: lo **score ICP**, il **tier** di priorita', la **track** piu' adatta dell'evento, e soprattutto il **messaggio di outreach pronto da inviare**, che apre con un complimento specifico sull'ultimo progetto reale dell'azienda di quella persona.
+**Cosa fa.** Prende un export di contatti (stile Waalaxy / Sales Navigator) e, per ogni figura senior, produce: lo **score ICP**, il **tier** di priorità, la **track** più adatta dell'evento, e soprattutto il **messaggio di outreach pronto da inviare**, che apre con un complimento specifico sull'ultimo progetto reale dell'azienda di quella persona.
 
 **Due fronti.** Il **primario**: portare in sala i tech leader giusti (CTO, VP Eng, Director, Staff/Architect). L'**extra mile**: lo stesso motore identifica le aziende giuste da portare come sponsor e il decisore giusto dentro ognuna, legando l'audience al fatturato dell'evento.
 
-**Perche' il messaggio e' il punto.** Targettizzare ("questo e' un CTO, contattalo") lo fa gia' qualsiasi tool. Quello che muove la risposta di una figura senior e' un primo messaggio che dimostra che hai letto cosa sta facendo: non "ti invito", ma "ho visto che avete migrato i pagamenti su multi-cloud a downtime zero, e la track Cloud va dritta su questo". Il tool industrializza questa personalizzazione, una per persona.
+**Perchè il messaggio è il punto.** Targettizzare ("questo è un CTO, contattalo") lo fa già qualsiasi tool. Quello che muove la risposta di una figura senior è un primo messaggio che dimostra che hai letto cosa sta facendo: non "ti invito", ma "ho visto che avete migrato i pagamenti su multi-cloud a downtime zero, e la track Cloud va dritta su questo". Il tool industrializza questa personalizzazione, una per persona.
 
 **La regola che lo rende serio: non inventa.** Il complimento nasce solo da un segnale verificato (`company_recent_signal` / `sponsor_signal`). Se il segnale manca, il sistema non si inventa un progetto: personalizzazione neutra + tag `[SEGNALE DA RICERCARE]`. Un complimento su un progetto falso brucia il contatto: meglio nessun complimento che uno inventato.
 
@@ -23,9 +23,9 @@
 
 ## 🎯 Profilo del cliente ideale (ICP) - il primo passo, esplicito
 
-Prima di "chi contattare" viene "chi vogliamo in sala". Questo e' il profilo, e lo scoring del tool ne e' la traduzione in numeri:
+Prima di "chi contattare" viene "chi vogliamo in sala". Questo è il profilo, e lo scoring del tool ne è la traduzione in numeri:
 
-- **Audience ideale:** figura tech con potere o influenza decisionale (CTO, CIO, VP/Director of Engineering, Head of Platform/Data/AI, Staff/Principal, Solutions Architect), in scaleup, enterprise o startup tech, preferibilmente gia' attiva nella community (speaker, organizer, open source, past attendee).
+- **Audience ideale:** figura tech con potere o influenza decisionale (CTO, CIO, VP/Director of Engineering, Head of Platform/Data/AI, Staff/Principal, Solutions Architect), in scaleup, enterprise o startup tech, preferibilmente già attiva nella community (speaker, organizer, open source, past attendee).
 - **Sponsor ideale (extra mile):** azienda che vende ai developer e/o assume in ambito tech, con un segnale recente (lancio, round, hub), e il decisore giusto dentro (DevRel/Marketing o Head of Tech Talent).
 
 L'ICP si applica **due volte**: come filtri di ricerca a monte (Sales Navigator) e come scoring dentro il tool.
@@ -34,7 +34,7 @@ L'ICP si applica **due volte**: come filtri di ricerca a monte (Sales Navigator)
 
 ## 🔌 La pipeline reale (collante: n8n)
 
-Il tool non sostituisce gli strumenti dell'evento: ci sta in mezzo, dove serve il giudizio. Il collante di automazione e' **n8n** (open source, self-hostabile); Zapier e Make sono alternative equivalenti.
+Il tool non sostituisce gli strumenti dell'evento: ci sta in mezzo, dove serve il giudizio. Il collante di automazione è **n8n** (open source, self-hostabile); Zapier e Make sono alternative equivalenti.
 
 **Stage 0 - da dove arrivano i dati (la fonte).** Non si parte da una lista a caso. Si parte da una **ricerca su Sales Navigator** con i filtri che sono l'ICP tradotto in ricerca: seniority (CXO, VP, Director), funzione (Engineering, IT), area geografica, dimensione e settore dell'azienda. Quei risultati vengono **estratti in CSV** con Waalaxy o Phantombuster. Il CSV grezzo (titoli disomogenei compresi) entra nel tool, che **normalizza il titolo**, deduce seniority e dominio, e calcola lo scoring. Quindi la fonte e' la ricerca mirata su Sales Navigator; il tool lavora su quell'export.
 
@@ -52,18 +52,18 @@ Sales Navigator (ricerca "CTO/VP Eng / aziende dev-first")
 ```
 
 **Gerarchia, in ordine di serieta':**
-- **CSV / Google Sheets** - il formato base. L'output e' gia' un foglio: si apre ovunque, zero attrito, funziona oggi.
+- **CSV / Google Sheets** - il formato base. L'output è già un foglio: si apre ovunque, zero attrito, funziona oggi.
 - **Waalaxy** - da dove escono i contatti (import da Sales Navigator) e dove rientrano le liste segmentate per l'outreach.
 - **HubSpot** - il CRM di destinazione, dove vivono tier, note e sequenze: l'integrazione naturale del prodotto verso un CRM B2B diffuso.
 - **n8n** - il collante che, in roadmap, automatizza i passaggi.
 
-**Nota onesta di fattibilita'.** Sales Navigator non ha un'API aperta e Waalaxy non ha API in ingresso (i dati escono solo, via CSV o n8n/Zapier/Make). HubSpot invece ha un'API vera: il push dei tier come property e' fattibile, ma in questo POC non e' costruito, sta in roadmap. Niente scraping diretto, niente integrazione dichiarata e non fatta.
+**Nota onesta di fattibilita'.** Sales Navigator non ha un'API aperta e Waalaxy non ha API in ingresso (i dati escono solo, via CSV o n8n/Zapier/Make). HubSpot invece ha un'API vera: il push dei tier come property è fattibile, ma in questo POC non e' costruito, sta in roadmap. Niente scraping diretto, niente integrazione dichiarata e non fatta.
 
 ---
 
 ## 🎯 Lo scenario
 
-Una grande **conferenza tech B2B di due giorni** (nel repo: "DevReach 2026", evento illustrativo e fittizio): community di oltre 250k developer, oltre 1000 tech leader. Contenuti su track tematiche (Cloud & Architectures, AI/ML, DevOps & Platform, Security, ecc.): il tool assegna a ogni contatto la track piu' affine, da usare come gancio nel messaggio. Per gli sponsor il valore e' incontrare quei developer: assumere, mostrare prodotti dev-first, fare networking B2B. I dati sono simulati e l'evento e' fittizio; il tool si adatta a qualsiasi conferenza tech B2B reale.
+Una grande **conferenza tech B2B di due giorni** (nel repo: "DevReach 2026", evento illustrativo e fittizio): community di oltre 250k developer, oltre 1000 tech leader. Contenuti su track tematiche (Cloud & Architectures, AI/ML, DevOps & Platform, Security, ecc.): il tool assegna a ogni contatto la track più affine, da usare come gancio nel messaggio. Per gli sponsor il valore e' incontrare quei developer: assumere, mostrare prodotti dev-first, fare networking B2B. I dati sono simulati e l'evento è fittizio; il tool si adatta a qualsiasi conferenza tech B2B reale.
 
 ---
 
@@ -98,13 +98,13 @@ ai-tech-event-outreach-strategist/
 
 ## 🧠 Scelte di design
 
-**Perche' il messaggio e non il targeting.** Il targeting lo fa gia' l'AI. Il collo di bottiglia umano e' scrivere decine di primi messaggi personalizzati e veri. Li' il tool fa la differenza.
+**Perchè il messaggio e non il targeting.** Il targeting lo fa già l'AI. Il collo di bottiglia umano è scrivere decine di primi messaggi personalizzati e veri. Lì il tool fa la differenza.
 
-**Perche' la regola di grounding e' sacra.** Un LLM libero "indovina" l'ultimo progetto. Un complimento plausibile ma falso e' peggio del silenzio. Quindi: complimento solo da segnale verificato, altrimenti flag esplicito.
+**Perchè la regola di grounding è sacra.** Un LLM libero "indovina" l'ultimo progetto. Un complimento plausibile ma falso è peggio del silenzio. Quindi: complimento solo da segnale verificato, altrimenti flag esplicito.
 
-**Perche' l'extra mile sponsor.** Riempire la sala e riempire gli stand sono lo stesso problema visto da due lati: una persona/azienda, un segnale recente, un complimento vero, un invito. Aggiungerlo lega il lavoro di audience al fatturato dell'evento.
+**Perchè l'extra mile sponsor.** Riempire la sala e riempire gli stand sono lo stesso problema visto da due lati: una persona/azienda, un segnale recente, un complimento vero, un invito. Aggiungerlo lega il lavoro di audience al fatturato dell'evento.
 
-**Perche' n8n come collante.** Open source, self-hostabile, leggibile anche senza essere sviluppatori. Zapier/Make fanno lo stesso, ma n8n e' la scelta piu' trasparente per chi vuole capire e controllare i flussi.
+**Perchè n8n come collante.** Open source, self-hostabile, leggibile anche senza essere sviluppatori. Zapier/Make fanno lo stesso, ma n8n è la scelta più trasparente per chi vuole capire e controllare i flussi.
 
 ---
 
@@ -119,10 +119,10 @@ ai-tech-event-outreach-strategist/
 
 ## ⚠️ Limitazioni note
 
-- **POC con dati simulati**: contatti, aziende e segnali sono realistici ma fittizi, cosi' come l'evento.
-- **Il segnale, nel POC, e' fornito**: l'enrichment automatico e' roadmap, non e' costruito.
+- **POC con dati simulati**: contatti, aziende e segnali sono realistici ma fittizi, così come l'evento.
+- **Il segnale, nel POC, è fornito**: l'enrichment automatico è roadmap, non è costruito.
 - **Le integrazioni (HubSpot, n8n) sono descritte come direzione, non implementate.**
-- **Qualita' = qualita' del CSV**: un export sporco produce uno scoring sporco.
+- **Qualità = qualità del CSV**: un export sporco produce uno scoring sporco.
 
 ---
 
