@@ -73,6 +73,29 @@ Una grande **conferenza tech B2B di due giorni** (nel repo: "DevReach 2026", eve
 2. Incolla [`docs/system-prompt.md`](docs/system-prompt.md) come primo messaggio.
 3. Incolla [`data/leaders.csv`](data/leaders.csv) (e, per l'extra mile, [`data/sponsors.csv`](data/sponsors.csv)).
 4. In ~20 secondi: scoring, track, e i messaggi pronti. Esempio completo in [`examples/sample-output.md`](examples/sample-output.md).
+## Esempi di esecuzione reale
+
+Screenshot del prompt eseguito sul dataset simulato in `/data`. Esecuzioni reali, non mockup. Dettagli e nota di trasparenza in [`examples/`](examples/examples_README.md).
+
+### 1. Scoring deterministico dei tech leader
+![Scoring leader](examples/01-scoring-leader.png)
+
+Ogni profilo riceve un punteggio ripetibile e un tier (A / B / C / Out) a partire da seniority, ruolo, azienda e segnale di community. Stesso input, stesso output: nessuna variabilita tra una run e l'altra.
+
+### 2. Messaggi pronti, ancorati al progetto reale del contatto
+![Messaggi leader](examples/02-messaggi-leader.png)
+
+Per i Tier A il tool genera messaggi 1:1 che partono da un risultato vero della persona (il "complimento vero"), non da testo generico. I contatti della stessa azienda ricevono angoli diversi, per non sembrare un mailing.
+
+### 3. Regola di grounding in azione
+![Grounding](examples/03-grounding-segnale-da-ricercare.png)
+
+Quando manca il segnale aziendale, il tool NON improvvisa. Personalizza sul solo dato verificabile (es. maintainer open source) e marca il punto aperto con `[SEGNALE DA RICERCARE]`, lasciando all'operatore l'ultimo controllo umano.
+
+### 4. Extra mile: sponsor-fit e decisore giusto
+![Scoring sponsor](examples/04-scoring-sponsor.png)
+
+Oltre ai tech leader, il tool valuta le aziende come potenziali sponsor (vende ai dev, assume, segnale recente) e indica il decisore giusto (DevRel / Marketing) per ciascuna: l'audience diventa pipeline commerciale.
 
 ---
 
