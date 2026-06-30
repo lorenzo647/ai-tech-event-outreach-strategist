@@ -130,7 +130,7 @@ ai-tech-event-outreach-strategist/
 
 **Lorenzo Ricci** - Project Manager & Communications Specialist
 
-Nasce da un metodo che uso quando scrivo a qualcuno che conta: non un messaggio generico, ma qualcosa di vero e recente che la sua azienda ha fatto. L'ho messo dentro un sistema, con una regola ferma: mai inventare il complimento. Il resto - scoring, track, drop-off, fronte sponsor — serve a far arrivare quel messaggio alla persona giusta, prima che si perda per strada.
+Nasce da un metodo che uso quando scrivo a qualcuno che conta: non un messaggio generico, ma qualcosa di vero e recente che la sua azienda ha fatto. L'ho messo dentro un sistema, con una regola ferma: mai inventare il complimento. Il resto - scoring, track, drop-off, fronte sponsor: serve a far arrivare quel messaggio alla persona giusta, prima che si perda per strada.
 
 ## 📄 License
 
