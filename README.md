@@ -51,7 +51,7 @@ Sales Navigator (ricerca "CTO/VP Eng / aziende dev-first")
         └──►  HubSpot (CRM): tier come property, messaggio come nota, sequenze
 ```
 
-**Gerarchia, in ordine di serieta':**
+**Gerarchia, in ordine di serietà:**
 - **CSV / Google Sheets** - il formato base. L'output è già un foglio: si apre ovunque, zero attrito, funziona oggi.
 - **Waalaxy** - da dove escono i contatti (import da Sales Navigator) e dove rientrano le liste segmentate per l'outreach.
 - **HubSpot** - il CRM di destinazione, dove vivono tier, note e sequenze: l'integrazione naturale del prodotto verso un CRM B2B diffuso.
